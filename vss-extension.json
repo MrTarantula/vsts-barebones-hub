@@ -1,0 +1,34 @@
+{
+    "manifestVersion": 1,
+    "id": "barebones",
+    "version": "0.1.0",
+    "name": "VSTS Barebones Hub",
+    "publisher": "YOURPUBLISHER",
+    "public": false,
+    "scopes": [],
+    "targets": [{
+        "id": "Microsoft.VisualStudio.Services"
+    }],
+    "files": [{
+            "path": "index.html",
+            "addressable": true
+        },
+        {
+            "path": "VSS.SDK.js",
+            "addressable": true
+        }
+    ],
+    "contributions": [{
+        "id": "hub-barebones",
+        "type": "ms.vss-web.hub",
+        "description": "Adds a thing to the Work hub group.",
+        "targets": [
+            "ms.vss-work-web.work-hub-group"
+        ],
+        "properties": {
+            "name": "A Thing",
+            "order": 99,
+            "uri": "index.html"
+        }
+    }]
+}
